@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/www"
     android:padding="16dp"
     tools:context=".register">
 
@@ -71,7 +72,7 @@
         android:id="@+id/buttonreg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reegister"
+        android:text="Register"
         android:layout_marginTop="24dp"/>
 
     <Button

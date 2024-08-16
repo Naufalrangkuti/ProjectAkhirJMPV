@@ -55,21 +55,17 @@ public class listdata extends AppCompatActivity {
         });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            class Inputdata {
-            }
-
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = (String) parent.getItemAtPosition(position);
                 String[] itemParts = selectedItem.split("\n");
                 String itemId = itemParts[0].replace("ID: ", "");
 
-                Intent intent = new Intent(listdata.this, Inputdata.class);
+                Intent intent = new Intent(listdata.this, inputdata.class);
                 intent.putExtra("ID", itemId);
                 startActivity(intent);
             }
         });
-
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -101,5 +97,6 @@ public class listdata extends AppCompatActivity {
                 listData.add("ID: " + data.getString(0) + "\nNama: " + data.getString(1) + "\nUmur: " + data.getString(2) + "\nMotto: " + data.getString(3));
             }
         }
+        data.close();
     }
 }
